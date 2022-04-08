@@ -1,0 +1,15 @@
+@import "./../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/base.scss";
+@import "global/kit.scss";
+@import "global/print.scss";
+@import "global/mobile.scss";
+@import "global/tablet.scss";
+@import "partials/rubric.scss";
+@import "partials/product-mini.scss";
+@import "partials/snippets.scss";
+@import "partials/bread-crumbs.scss";
+@import "partials/rubric-mini.scss";
+@import "partials/products-slider.scss";

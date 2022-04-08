@@ -1,0 +1,142 @@
+h1{
+	margin: 0 0 13px;
+	color: $color_heading;
+	font: bold 30px $font_popup_title_regular;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: $font_popup_title_regular;
+	letter-spacing: 0.7px;
+}
+
+main{
+	display: block;
+	flex: 1 0 auto;
+	margin: 119px 0 0;
+
+	.holder_top{
+		max-width: 1920px;
+		margin: 0 auto;
+		/*background-color: $color_holder_top_bg;
+		box-shadow: 0 1px 0 $color_holder_top_shadow;*/
+
+		.holder{
+			padding: 16px 22px;
+
+			.seealso_tags{
+				overflow: hidden;
+				padding: 0;
+
+				a{
+					float: left;
+					margin: 14px 10px 1px 0;
+					padding: 5px 9px;
+					color: $color_article_seealso;
+					font: 14px/16px $font_header_link;
+					text-decoration: none;
+					background-color: $color_article_seealso_bg;
+					border: 1px solid $color_article_seealso_border;
+					border-radius: 3px;
+					-ms-user-select: none;
+					-moz-user-select: none;
+					-webkit-user-select: none;
+					user-select: none;
+
+					&:first-child{
+						margin: 14px 10px 1px 4px;
+					}
+
+					span{
+						margin: 0 0 0 14px;
+						color: $color_rubric_filters_panel_option_quantity;
+						font: 11px/11px $font_header_link;
+					}
+
+					&:hover{
+						background-color: $color_rubric_filters_panel_option_hover_bg;
+					}
+				}
+			}
+		}
+	}
+
+	article{
+		display: flex;
+		max-width: 1900px;
+		overflow: hidden;
+		margin: 0 auto;
+		padding: 10px;
+
+		&.article-page {
+			font-size: 15px;
+		}
+
+		.wrapper{
+			width: 100%;
+			padding: 24px;
+			background-color: $color_article_bg;
+			box-shadow: 1px 1px 0 $color_product_page_shadow;
+
+			p{
+				overflow: hidden;
+			}
+
+			img[align="left"],
+			img[style*="float: left"],
+			img[style*="float:left"]{
+				margin: 0 10px 0 0;
+			}
+
+			img[align="right"],
+			img[style*="float: right"],
+			img[style*="float:right"]{
+				margin: 0 0 0 10px;
+			}
+		}
+
+		aside{
+			min-width: 236px;
+			width: 236px;
+			margin: 0 0 0 20px;
+
+			ul{
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li{
+
+					ul{
+						padding: 0 0 0 20px;
+					}
+
+					a{
+						display: inline-block;
+						margin: 6px 12px;
+						color: $color_article_aside_link;
+						font: 16px $font_header_link;
+						text-decoration: none;
+						border-bottom: 1px dotted $color_article_aside_link;
+					}
+
+					&.active{
+						background-color: $color_article_aside_link_active_bg;
+						border-radius: 5px;
+
+						a{
+							color: $color_article_aside_link_active;
+							border: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

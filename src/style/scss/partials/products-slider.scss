@@ -1,0 +1,136 @@
+.products_holder{
+	width: 100%;
+	overflow: hidden;
+	padding: 24px 0 0;
+
+	&.novelty{
+		padding: 10px 0 0;
+	}
+
+	&.same_products,
+	&.last_seen{
+		width: auto;
+		margin: 0 0 0 -8px;
+		padding: 30px 0 0;
+
+		.title{
+			margin: 0;
+			padding: 0 10px 0 18px;
+		}
+
+		.holder{
+			padding: 4px;
+		}
+	}
+
+	&.accessories{
+
+		.holder{
+			padding: 4px;
+		}
+	}
+
+	.holder{
+		width: auto;
+		display: flex;
+		overflow: hidden;
+		margin: 0;
+		padding: 4px 15px;
+
+		&.hide{
+			display: none;
+		}
+	}
+
+	.title{
+
+		&.article_title{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			overflow: hidden;
+			padding: 16px 10px;
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6{
+				margin: 0 0 0 10px;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+			}
+
+			.btn_compare{
+				width: 188px;
+				display: inline-block;
+				position: relative;
+				padding: 0 0 0 30px;
+				color: $color_btn;
+				font: 14.3px/30px $font_header_link;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				background: $color_btn_bg;
+				border: 1px solid $color_btn_border;
+				border-radius: 4px;
+
+				&:hover{
+					background: $color_btn_bg_hover;
+				}
+
+				&::before{
+					content: $icon_compare;
+					height: 24px;
+					width: 24px;
+					display: block;
+					position: absolute;
+					top: 6px;
+					left: 8px;
+					font: 24px/24px $font_mg;
+				}
+			}
+
+			.all_popular{
+				color: $color_link_hover;
+				font: 14.3px $font_header_link;
+
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.product_type_switch{
+		display: none;
+		padding: 0 40px 0 28px;
+
+		&.active{
+			display: block;
+		}
+
+		a{
+			display: inline-block;
+			margin: 0 0 16px 12px;
+			padding: 0 11px;
+			color: $color_product_page_accessories_type_switch;
+			font: 16px/33px $font_header_link;
+			text-decoration: none;
+			border: 1px solid transparent;
+			border-radius: 3px;
+
+			&:hover{
+				border: 1px solid $color_product_page_accessories_type_switch_border;
+			}
+
+			&.active{
+				color: $color_product_page_accessories_type_switch_active;
+				background-color: $color_product_page_accessories_type_switch_active_bg;
+				border: 1px solid $color_product_page_accessories_type_switch_active_bg;
+			}
+		}
+	}
+}
+

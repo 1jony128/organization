@@ -1,0 +1,22 @@
+#debugLinksInHeader {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  width: 200px;
+  background: #ddd;
+  height: 20px;
+  margin-left: -100px;
+  text-align: center;
+  z-index: 100;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  opacity: 0.3
+}
+
+#debugLinksInHeader:hover {
+  opacity: 1;
+}
+
+#debugLinksInHeader a {
+  font-size: 10px;
+}

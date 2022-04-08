@@ -1,0 +1,30 @@
+.bread_crumbs{
+	overflow: hidden;
+	margin: 0 6px;
+	padding: 0;
+	list-style: none;
+
+	li{
+		float: left;
+
+		a{
+			color: $color_bread_crumbs;
+			font: 16px $font_header_link;
+			text-decoration: none;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+		&::before{
+			content: '/';
+			margin: 0 10px;
+			color: $color_bread_crumbs_slash;
+		}
+
+		&:first-child::before{
+			display: none;
+		}
+	}
+}

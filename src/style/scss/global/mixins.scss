@@ -1,0 +1,209 @@
+@mixin user-select-none {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin last-photos-with-icon-plus-product($font-size, $top) {
+	display: none;
+	&.spacer {
+		display: inline-block;
+		width: 30px;								
+	}
+	&.icon {
+		display: inline-block;
+		position: absolute;
+		top: $top;
+		right: 15px;
+		&::before {								
+			content: $icon_plus_in_round;
+			font-family: $font_mg;
+			font-size: $font-size;
+			color: $color_product_hidden_photos_plus;
+		}
+	}
+}
+
+@mixin last-photos-with-icon-plus-table($font-size) {
+	&.last-photos-with-icon-plus{
+		.img-small:nth-of-type(3){
+			padding-right:40px;
+			&:after{
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				content: $icon_plus_in_round;
+				font-family: $font_mg;
+				font-size: $font-size;
+				color: $color_product_hidden_photos_plus;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	.img-small{
+	    display: inline-block;
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    img {
+	    	padding: 5px 2px 0;
+		    display: inline-block;
+		    height: 80px;
+		    width: 80px;
+	    }
+	}
+}
+
+@mixin color-link() {
+	&.bc_yellow {
+		background-color: $bc_yellow;
+	}
+
+	&.bc_ivory {
+		background-color: $bc_ivory;
+		border: 1px solid $bc-color-border;
+	}
+
+	&.bc_gold {
+		background-color: $bc_gold;
+	}
+
+	&.bc_mustard {
+		background-color: $bc_mustard;
+	}
+
+	&.bc_sand {
+		background-color: $bc_sand;
+	}
+
+	&.bc_brown {
+		background-color: $bc_brown;
+	}
+
+	&.bc_chocolate {
+		background-color: $bc_chocolate;
+	}
+
+	&.bc_orange {
+		background-color: $bc_orange;
+	}
+
+	&.bc_body {
+		background-color: $bc_body;
+	}
+
+	&.bc_salmon {
+		background-color: $bc_salmon;
+	}
+
+	&.bc_brick {
+		background-color: $bc_brick;
+	}
+
+	&.bc_red {
+		background-color: $bc_red;
+	}
+
+	&.bc_coral {
+		background-color: $bc_coral;
+	}
+
+	&.bc_burgundy {
+		background-color: $bc_burgundy;
+	}
+
+	&.bc_ruby {
+		background-color: $bc_ruby;
+	}
+
+	&.bc_crimson {
+		background-color: $bc_crimson;
+	}
+
+	&.bc_beet {
+		background-color: $bc_beet;
+	}
+
+	&.bc_rose {
+		background-color: $bc_rose;
+	}
+
+	&.bc_violet {
+		background-color: $bc_violet;
+	}
+
+	&.bc_deepblue {
+		background-color: $bc_deepblue;
+	}
+
+	&.bc_sapphire {
+		background-color: $bc_sapphire;
+	}
+
+	&.bc_dove {
+		background-color: $bc_dove;
+	}
+
+	&.bc_skyblue {
+		background-color: $bc_skyblue;
+	}
+
+	&.bc_blue {
+		background-color: $bc_blue;
+	}
+
+	&.bc_azure {
+		background-color: $bc_azure;
+	}
+
+	&.bc_turquoise {
+		background-color: $bc_turquoise;
+	}
+
+	&.bc_pine {
+		background-color: $bc_pine;
+	}
+
+	&.bc_green {
+		background-color: $bc_green;
+	}
+
+	&.bc_lime {
+		background-color: $bc_lime;
+	}
+
+	&.bc_emerald {
+		background-color: $bc_emerald;
+	}
+
+	&.bc_camouflage {
+		background-color: $bc_camouflage;
+	}
+
+	&.bc_canvas {
+		background-color: $bc_canvas;
+	}
+
+	&.bc_white {
+		background-color: $bc_white;
+		border: 1px solid $bc-color-border;
+	}
+
+	&.bc_silver {
+		background-color: $bc_silver;
+	}
+
+	&.bc_gray {
+		background-color: $bc_gray;
+	}
+
+	&.bc_coal {
+		background-color: $bc_coal;
+	}
+
+	&.bc_black {
+		background-color: $bc_black;
+	}		
+			
+}

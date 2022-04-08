@@ -1,0 +1,57 @@
+.productTypeMenu {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  height: 30px;
+}
+.productTypeMenu li {
+  float:left;
+  padding:0;
+  margin:0;
+}
+
+.productTypeMenu li a {
+  display: inline-block;
+  padding: 10px;
+  background: #ddd;
+  border: 1px solid #eee;
+}
+
+.productTypeMenu li a:hover {
+  background: mistyrose;
+}
+
+.productTypeMenu li.active a {
+  background: blanchedalmond;
+}
+
+.comparePageContentWrap {
+  height: 300px;
+  max-width: 100%;
+  overflow: auto;
+  margin-top: 20px;
+}
+
+.productCompare {
+  float: left;
+  width: 250px;
+  background: #DDF9FD;
+  border: 2px solid #ddd;
+  margin-right: 2px;
+}
+
+.productCompare ul {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+.productCompare ul li {
+  padding:0;
+  margin:0;
+}
+
+.productCompare ul li:first-child {
+  height: 73px;
+  overflow: hidden;
+}

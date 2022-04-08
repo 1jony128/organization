@@ -1,0 +1,282 @@
+.uikit{
+
+	&.personal_cabinet_orders{
+		width: auto;
+	}
+}
+
+a{
+	color: $color_personal_cabinet_link;
+
+	&:hover{
+		text-decoration: none;
+	}
+
+	&.name{
+		margin: 0 5px 0 0;
+	}
+}
+
+p{
+	margin: 0 0 15px;
+}
+
+.bracket{
+	margin: 0 5px;
+}
+
+.order,
+.organisation{
+	display: block;
+	overflow: hidden;
+	margin: 0 0 15px;
+}
+
+.title_checkout{
+	width: 530px;
+}
+
+.text{
+
+	.key{
+		width: 150px;
+		flex-shrink: 0;
+	}
+}
+
+.warning{
+	display: inline-block;
+	margin: 0 0 15px;
+	padding: 10px 26px;
+	color: $color_popup_ico_2;
+	background-color: $color_kit_input_warning_bg;
+	border: 2px solid $color_popup_ico_2;
+	border-radius: 3px;
+
+	&.hide{
+		display: none;
+	}
+
+	.text{
+		display: inline-block;
+		margin: 0 0 15px;
+		font: 16px/18px $font_header_link;
+
+		&::before{
+			content: $icon_exclamation_circle;
+			margin: 0 5px 0 0;
+			color: $color_popup_ico_2;
+			font: 18px/18px $font_mg;
+			vertical-align: text-bottom;
+		}
+	}
+
+	.btn{
+		height: 32px;
+		width: 100px;
+		display: block;
+		margin: 0 auto;
+		color: $color_popup_ico_2;
+		font: 16px/30px $font_header_link;
+		text-align: center;
+		text-decoration: none;
+		border: 2px solid $color_popup_ico_2;
+		border-radius: 3px;
+	}
+}
+
+.enter_phone,
+.enter_email{
+	overflow: hidden;
+
+	&.hide{
+		display: none;
+	}
+
+	.item{
+		width: 400px;
+		display: flex;
+		margin: 0 0 15px;
+
+		&.hide{
+			display: none;
+		}
+
+		.info{
+			width: 250px;
+			flex-shrink: 0;
+			color: $color_personal_cabinet_info;
+
+			.content{
+				font: 16px/18px $font_header_link;
+
+				&::after{
+					content: $icon_check_circle;
+					margin: 0 0 0 5px;
+					color: $color_personal_cabinet_icon_valid;
+					font: 18px/18px $font_mg;
+					vertical-align: text-bottom;
+				}
+			}
+		}
+
+		&.password{
+
+			.info{
+
+				.content{
+					font: 18px/18px Roboto, Arial, sans-serif;
+					letter-spacing: 5px;
+
+					&::after{
+						content: '';
+					}
+				}
+			}
+		}
+	}
+
+	.email_warning{
+		display: block;
+		overflow: hidden;
+
+		&.hide{
+			display: none;
+		}
+
+		.text{
+			display: inline-block;
+			margin: 0 0 15px;
+			font: 16px/18px $font_header_link;
+
+			&::before{
+				content: $icon_exclamation_circle;
+				margin: 0 5px 0 0;
+				color: $color_popup_ico_2;
+				font: 18px/18px $font_mg;
+				vertical-align: text-bottom;
+			}
+		}
+	}
+}
+
+.empty{
+
+	&.hide{
+		display: none;
+	}
+}
+
+.cabinet_quantity{
+	text-decoration: none;
+	border-bottom: 1px dotted $color_personal_cabinet_link;
+
+	&:hover,
+	&:active{
+		border-bottom: 0;
+	}
+
+	&::after{
+		content: $icon_filter_knob_inverse;
+		margin: 0 0 0 5px;
+		font: 18px/18px $font_mg;
+	}
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+
+	tr{
+
+		th{
+			padding: 5px 10px;
+			font-weight: normal;
+			text-align: left;
+			background-color: $color_personal_cabinet_table_heading_bg;
+			border: 1px solid $color_personal_cabinet_table_bd;
+			white-space: nowrap;
+
+			&:last-child{
+				background-color: transparent;
+				border: 0;
+			}
+		}
+
+		&.tr_order{
+			display: none;
+		}
+
+		&.active{
+
+			td{
+				background-color: $color_personal_cabinet_table_bg;
+			}
+
+			.quantity{
+				border-bottom: 0;
+
+				&::after{
+					content: $icon_filter_knob;
+				}
+			}
+		}
+
+		&.active + .tr_order{
+			display: table-row;
+		}
+
+		td{
+			padding: 5px 10px;
+			border: 1px solid $color_personal_cabinet_table_bd;
+			white-space: nowrap;
+
+			&:nth-child(3){
+				white-space: normal;
+			}
+
+			&:nth-child(1),
+			&:nth-child(4),
+			&:nth-child(5){
+				text-align: right;
+			}
+
+			&:last-child{
+				background-color: transparent;
+				border: 0;
+			}
+
+			&.td_holder{
+				padding: 10px;
+				background-color: $color_personal_cabinet_table_bg;
+				border: 1px solid $color_personal_cabinet_table_bd;
+			}
+		}
+	}
+
+	&.nested{
+		background-color: $color_personal_cabinet_table_nested_bg;
+
+		tr{
+
+			th{
+				background-color: $color_personal_cabinet_table_nested_heading_bg;
+			}
+
+			th,
+			td{
+				border: 1px solid $color_personal_cabinet_table_nested_bd;
+
+				&:nth-child(1),
+				&:nth-child(2){
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	a,
+	.total{
+		white-space: nowrap;
+	}
+}

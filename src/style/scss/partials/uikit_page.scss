@@ -1,0 +1,97 @@
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: $font_popup_title_regular;
+	letter-spacing: 0.7px;
+}
+
+main{
+	display: block;
+	flex: 1 0 auto;
+	margin: 119px 0 0;
+
+	h1{
+		width: 768px;
+		margin: 24px 0 24px 88px;
+		color: $color_heading;
+		font: bold 30px $font_popup_title_regular;
+		letter-spacing: 0.7px;
+
+		@media all and (max-width: 1146px){
+			width: auto;
+			margin: 24px 16px;
+		}
+
+		@media all and (max-width: $screen-phone){
+			height: 50px;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			margin: 0;
+			padding: 10px 50px;
+			white-space: nowrap;
+			font: bold 22px/30px $font_popup_title_regular;
+			letter-spacing: 0.7px;
+			text-overflow: ellipsis;
+			background-color: $color_actions_page_bg;
+			box-shadow: 0 0 5px $color_kit_shadow ;
+			box-sizing: border-box;
+			z-index: 100;
+
+			&::before{
+				height: 50px;
+				width: 50px;
+				display: block;
+				content: $icon_filter_knob_back;
+				position: fixed;
+				top: 0;
+				left: 0;
+				color: $color_kit_h1_before_after;
+				font: 30px/50px $font_mg;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			&::after{
+				height: 50px;
+				width: 50px;
+				display: block;
+				content: $icon_question;
+				position: fixed;
+				top: 0;
+				right: 0;
+				color: $color_kit_h1_before_after;
+				font: 24px/50px $font_mg;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+
+		@media all and (max-width: 359px){
+			height: 46px;
+			padding: 10px 46px;
+			font: bold 19px/26px $font_popup_title_regular;
+			letter-spacing: 0.7px;
+			&::before{
+				height: 46px;
+				width: 46px;
+				font: 28px/46px $font_mg;
+			}
+
+			&::after{
+				height: 46px;
+				width: 46px;
+				font: 22px/46px $font_mg;
+			}
+		}
+	}
+
+	.holder{
+		overflow: hidden;
+		background-color: $color_actions_page_bg;
+	}
+}

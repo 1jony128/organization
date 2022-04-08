@@ -1,0 +1,156 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin: 0 0 24px;
+	color: $color_heading;
+	font: bold 30px $font_popup_title_regular;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+}
+
+section{
+	min-width: 846px;
+	max-width: 1240px;
+	overflow: hidden;
+	margin: 119px 10px 0 0;
+	padding: 24px 0 0 280px;
+
+	@media all and (min-width: 1937px){
+		margin: 119px auto 0;
+		padding: 24px 0 0;
+	}
+
+	.title{
+		overflow: hidden;
+
+		h1, h2, h3, h4, h5, h6{
+			display: inline-block;
+			margin: 0 0 20px;
+		}
+
+		a{
+			margin: 0 0 0 30px;
+			color: $color_rubric_sort_mode_active;
+			font: 14px/20px $font_header_link;
+			text-decoration: none;
+
+			&:hover{
+				color: $color_catalog_list_title_hover;
+			}
+		}
+	}
+
+	.holder{
+		overflow: hidden;
+
+		.catalog_list{
+			overflow: hidden;
+			margin: 0 0 20px 0;
+			padding: 20px 40px 16px;
+			background-color: $color_catalog_list_bg;
+			position: relative;
+
+			span.anchor {
+				position: absolute;
+				top:-55px;
+				left:0;
+			}
+
+			.catalog_list_name{
+				margin: 0 -7px;
+				padding: 0 7px;
+				border-bottom: 1px solid $color_catalog_list_name_border;
+
+				a{
+					color: $color_catalog_list_name;
+					font: bold 30px $font_popup_title_regular;
+					letter-spacing: 0.7px;
+					text-decoration: none;
+
+					span{
+						margin: 0 0 0 7px;
+						color: $color_catalog_list_name_counter;
+						font: 12px $font_header_link;
+						vertical-align: top;
+					}
+				}
+			}
+
+			.catalog_list_content{
+				overflow: hidden;
+				margin: 0 -20px 0 0;
+				padding: 4px 0 0;
+
+				.brand_item{
+					width: 373px;
+					float: left;
+					padding: 10px 0;
+
+					.brand_image{
+						display: none;
+					}
+
+					.brand_name{
+						display: inline-block;
+						color: $color_link_hover;
+						font: 14px $font_header_link;
+						text-decoration: none;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+
+		&.tile{
+
+			.catalog_list{
+
+				.catalog_list_content{
+
+					.brand_item{
+						display: table;
+						margin: 0 20px 0 0;
+
+						.brand_image{
+							height: 45px;
+							min-width: 250px;
+							max-width: 250px;
+							display: table-cell;
+							vertical-align: middle;
+
+							a{
+								max-height: 100%;
+								max-width: 100%;
+								float: right;
+							}
+
+							img{
+								max-height: 100%;
+								max-width: 100%;
+								display: block;
+								border: 0;
+							}
+
+							&:hover + .brand_name{
+								text-decoration: underline;
+							}
+						}
+
+						.brand_name{
+							width: 123px;
+							display: table-cell;
+							padding: 0 0 0 10px;
+
+							&:hover{
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.snippets{
+	overflow: hidden;
+	margin: 0 0 7px;
+
+	a{
+		float: left;
+		margin: 0 10px 7px 0;
+		padding: 0 9px;
+		color: $color_rubric_smart_tag;
+		font: 14px/24px $font_header_link;
+		text-decoration: none;
+		letter-spacing: 0.4px;
+		background-color: $color_rubric_smart_tag_bg;
+		border: 1px solid $color_rubric_smart_tag_border;
+		border-radius: 3px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		&.snippet_orange{
+			color: $color_rubric_smart_tag_active;
+			background-color: $color_rubric_smart_tag_bg_active;
+			border: 1px solid $color_rubric_smart_tag_border_active;
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6{
+				color: $color_rubric_smart_tag_active;
+			}
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6{
+			margin: 0;
+			font: 14px/24px $font_header_link;
+			text-transform: none;
+		}
+	}
+}

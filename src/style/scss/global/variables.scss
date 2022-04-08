@@ -1,0 +1,648 @@
+/************************************************************************/
+/* GLOBAL VARIABLES *****************************************************/
+/************************************************************************/
+@font-face {
+	font-family: 'Panton Light';
+	src: url('../fonts/Panton-Light.otf');
+}
+
+@font-face {
+	font-family: 'Panton';
+	src: url('../fonts/Panton-Regular.otf');
+}
+
+@font-face {
+	font-family: MG;
+	src: url('../fonts/MG.woff2');
+}
+
+@font-face {
+	font-family: 'PT Sans';
+	src: url('../fonts/PTSans.ttf');
+}
+
+@font-face {
+	font-family: 'PT Sans';
+	font-weight: bold;
+	src: url('../fonts/PTSans-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Neo Sans Cyr';
+	src: url('../fonts/NeoSansCyr-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../fonts/UTM Neo Sans IntelBold.ttf');
+}
+
+$font_mg                      : MG;
+$font_header_link             : 'PT Sans', sans-serif;
+$font_header_phone            : MG;
+$font_popup_title             : 'Panton Light', sans-serif;
+$font_popup_title_regular     : 'Panton', sans-serif;
+$font_oldprice                : MG;
+$font_time_select             : 'Neo Sans Cyr', sans-serif;
+$font_total                   : 'UTM Neo Sans Intel', sans-serif;
+
+$icon_location               : '\e308';
+$icon_user                   : '\e312';
+$icon_bars                   : '\e318';
+$icon_filter_knob            : '\e319';
+$icon_filter_knob_inverse    : '\f83e';
+$icon_filter_knob_back       : '\f83d';
+$icon_filter_search          : '\e302';
+$icon_filter_folder          : '\e30c';
+$icon_compare                : '\e314';
+$icon_star                   : '\22c6';
+$icon_eye                    : '\e30a';
+$icon_eye_closed             : '\f83c';
+$icon_cart                   : '\e30b';
+$icon_ruble                  : '\20bd';
+$icon_trash                  : '\2421';
+$icon_cubes                  : '\e310';
+$icon_certificate            : '\e311';
+$icon_truck                  : '\e30d';
+$icon_clock                  : '\e30e';
+$icon_minus                  : '\f83f';
+$icon_plus                   : '\f838';
+//$icon_plus                   : '\002b';
+$icon_plus_in_round          : '\f834';
+$icon_question               : '\e309';
+$icon_check                  : '\f836';
+$icon_ascend                 : '\e31f';
+$icon_descend                : '\e320';
+$icon_matrix_big             : '\f82f';
+$icon_matrix                 : '\f831';
+$icon_specs                  : '\f832';
+$icon_not_valid_mark         : '\e307';
+$icon_cloud                  : '\f839';
+$icon_mt_box                 : '\f83a';
+$icon_novalue                : '\003f';
+$icon_tab_knob               : '\f83b';
+$icon_exclamation_circle     : '\f841';
+$icon_check_circle           : '\f83f';
+$icon_info                   : '\f840';
+$icon_error                  : '\f842';
+$icon_prev                   : '\2190';
+$icon_next                   : '\2192';
+$icon_temp_delete            : '\0192';
+$icon-up					 : '\1F893';
+$icon-right					 : '\1F892';
+
+$mini_product_duration                     : 200ms;
+
+$color_main_bg                             : #f2f2f2;
+$color_heading                             : #0a0a0a;
+$color_heading_not_active                  : #ccc;
+
+$color_region_guess                        : #fff;
+$color_region_guess_close                  : #ddd;
+$color_region_guess_bg                     : #7f7f7f;
+$color_region_guess_shadow                 : #8f8f8f;
+
+$color_header_location                     : #6a6a6a;
+$color_header_link                         : #6a6a6a;
+$color_link_hover                          : #1871de;
+$color_link_border_bottom                  : #9d9d9d;
+$color_header_bg_menu                      : #5e5e5e;
+$color_header_phone                        : #363636;
+$color_bars_a                              : #fff;
+$color_catalog_holder                      : #fff;
+$color_catalog_holder_shadow               : rgba(0,0,0,0.1);
+$color_catalog_categories_bg               : #808080;
+$color_catalog_categories_a                : #fff;
+$color_catalog_categories_a_hover          : #9ced18;
+$color_catalog_categories_a_triangle       : #fff;
+$color_catalog_product_type                : #121212;
+$color_catalog_product_type_hover          : #1871de;
+$color_catalog_rubric_name                 : #1871de;
+$color_catalog_product_of_day              : #4b5055;
+$color_catalog_product_of_rubric           : #a3a3a3;
+$color_catalog_product_of_rubric_border    : #ebebeb;
+$color_catalog_product_name                : #1871de;
+$color_catalog_product_name_span           : #a3a3a3;
+$color_catalog_product_price               : #121212;
+$color_catalog_product_price_span          : #ccc;
+$color_catalog_product_circle              : #f2f2f2;
+$color_catalog_product_circle_active       : #d6d6d6;
+
+$color_action_a                            : #9ded19;
+$color_action_a_hover                      : #bffa5e;
+$color_search_bg                           : #fff;
+$color_filter_select_bg                    : #dedede;
+$color_filter_select_content               : #696969;
+$color_filter_placeholder                  : #a3a3a3;
+$color_filter_search_submit                : #c4c4c4;
+$color_status_icons                        : #fff;
+$color_status_icon_badge                   : #fff;
+$color_status_icon_popup_border            : #5e5e5e;
+$color_status_icon_badge_bg                : #f78800;
+$color_header_mini_cart                    : #f78800;
+$color_header_mini_cart_bg                 : #fff;
+$color_header_mini_cart_icon_badge_bg      : #5e5e5e;
+$color_header_mini_cart_message            : #121212;
+$color_wrapper_for_popup_bg                : hsla(0, 0%, 0%, 0.15);
+$color_popup_bg                            : #fff;
+$color_popup_price                         : #121212;
+$color_popup_grey                          : #a3a3a3;
+$color_popup_del                           : #6a6a6a;
+$color_popup_del_disabled                  : #ddd;
+$color_popup_item_border                   : #e0e0e0;
+$color_popup_a_border                      : #de7a00;
+$color_popup_select_city_link              : #000;
+$color_popup_select_city_link_icon         : #dd1a00;
+$color_popup_ico_1                         : #1871de;
+$color_popup_ico_2                         : #f7dd5c;
+$color_popup_ico_3                         : #66a600;
+$color_popup_ico_4                         : #1871de;
+$color_popup_ico_5                         : #dd1a00;
+$color_popup_message                       : #121212;
+$color_empty_message                       : #121212;
+
+$color_footer                              : #787878;
+$color_footer_bg                           : #fff;
+$color_footer_attraction                   : #a6afbb;
+$color_footer_manufacturers                : #808080;
+$color_footer_manufacturers_link           : #1871de;
+$color_footer_item                         : #a3a3a3;
+$color_footer_item_title                   : #404040;
+$color_footer_copyright                    : #262626;
+$color_footer_phone                        : #121212;
+
+$color_scrollbar_track_box_shadow          : rgba(0,0,0,0.3);
+$color_scrollbar_track_bg                  : #fff;
+$color_scrollbar_bg                        : #F5F5F5;
+$color_scrollbar_thumb_bg                  : #ababab;
+$color_scrollbar_thumb_bg_hover            : #8d8d8d;
+
+$color_popup_search_bg                     : hsla(0, 0%, 0%, 0.15);
+$color_popup_search_form_border            : #d6d6d6;
+$color_popup_search_form_hint              : #f78800;
+$color_popup_search_add_holder_border      : #505050;
+$color_popup_search_add_holder_shadow      : #383838;
+$color_popup_search_categories             : #121212;
+$color_popup_search_a_bg_hover             : #dedede;
+$color_popup_search_a_hover                : #fff;
+$color_popup_search_li_border              : #d6d6d6;
+$color_popup_search_ico_rubric             : #f78800;
+$color_popup_search_form_add_info          : #c6c6c6;
+$color_popup_search_form_add_info_link     : #a7c0ef;
+$color_popup_search_footer                 : #f78800;
+$color_popup_search_footer_link            : #fff;
+$color_popup_search_footer_border          : #de7a00;
+$color_popup_search_footer_delimiter       : #fccc91;
+$color_popup_search_footer_icon            : #fff1e0;
+$color_popup_search_count                  : #fff;
+$color_popup_search_count_bg               : #f78800;
+
+$color_popup_product_nano                  : #e37d00;
+$color_popup_product_nano_hover            : #ffc278;
+$color_popup_product_nano_bg_hover         : #1871de;
+$color_popup_product_nano_hover_1          : #fff;
+$color_popup_product_nano_hover_2          : #fff;
+$color_popup_product_nano_1                : #1871de;
+$color_popup_product_nano_2                : #a3a3a3;
+
+$color_promo_bg                            : #ccc;
+$color_slider                              : #000;
+$color_slider_banner                       : #fff;
+$color_slider_banner_hover                 : #f28500;
+$color_slider_banner_shadow                : rgba(0,0,0,0.2);
+
+$color_btn                                 : #fff;
+$color_btn_bg                              : #f78800;
+$color_btn_bg_hover                        : #ffa32f;
+$color_btn_border                          : #de7a00;
+$color_btn_outofstock_bg                   : #a3a3a3;
+$color_btn_outofstock_border               : #888;
+$color_description_outofstock              : #888;
+
+$color_product_bg                          : #fff;
+$color_product_textattr                    : #121212;
+$color_product_textattr_bg                 : #fff;
+$color_product_textattr_hover              : #fff;
+$color_product_textattr_bg_hover           : #a9a9a9;
+$color_product_star                        : #e2e2e2;
+$color_product_star_active                 : #ffc748;
+$color_product_favorite_active             : #ffc748;
+$color_product_oldprice                    : #bfbfbf;
+$color_product_compare                     : #6a6a6a;
+$color_product_border_hover                : #a9a9a9;
+$color_product_mini_box_shadow             : #e0e0e0;
+$color_product_mini_hint                   : #313131;
+$color_product_mini_hint_bg                : #fff;
+
+$color_product_hidden_photos_bg            : hsla(0, 0%, 100%, 0.9);
+$color_product_hidden_photos_plus          : #a3a3a3;
+
+$color_product_more                        : #000;
+$color_product_more_bg                     : #fff;
+$color_product_more_all                    : #ccc;
+
+$color_product_paging                      : #000;
+$color_product_paging_bg                   : #fff;
+$color_product_paging_bg_active            : #aaa;
+$color_product_paging_bg_hover             : #ddd;
+$color_product_paging_border               : #000;
+
+$color_product_circle_stroke               : #595959;
+$color_product_circle_white                : #fff;
+$color_product_circle_gray                 : #595959;
+$color_product_circle_green                : #8cbf38;
+$color_product_circle_orange               : #f28500;
+$color_product_circle_dark_blue            : #1871de;
+$color_product_circle_blue                 : #e5edff;
+$color_product_circle_pink                 : #ffe5ff;
+$bc_yellow																 : hsl(60, 100%, 57%);
+$bc_ivory																	 : hsl(59, 84%, 88%);
+$bc_gold																	 : hsl(50, 100%, 50%);
+$bc_mustard																 : hsl(46, 86%, 57%);
+$bc_sand                                   : hsl(44, 100%, 78%);
+$bc_brown                                  : hsl(23, 39%, 42%);
+$bc_chocolate                              : hsl(15, 30%, 29%);
+$bc_orange                                 : hsl(33, 89%, 54%);
+$bc_body																	 : hsl(20, 95%, 77%);
+$bc_salmon																 : hsl(16, 100%, 59%);
+$bc_brick																	 : hsl(8, 68%, 49%);
+$bc_red																		 : hsl(2, 86%, 51%);
+$bc_coral																	 : hsl(0, 91%, 65%);
+$bc_burgundy															 : hsl(353, 69%, 35%);
+$bc_ruby																	 : hsl(359, 52%, 36%);
+$bc_crimson																 : hsl(353, 100%, 63%);
+$bc_beet                                   : hsl(345, 50%, 34%);
+$bc_rose																	 : hsl(331, 83%, 69%);
+$bc_violet																 : hsl(289, 34%, 53%);
+$bc_deepblue                               : hsl(255, 22%, 18%);
+$bc_sapphire                               : hsl(226, 45%, 28%);
+$bc_dove																	 : hsl(223, 20%, 63%);
+$bc_skyblue                                : hsl(207, 87%, 60%);
+$bc_blue																	 : hsl(214, 53%, 43%);
+$bc_azure																	 : hsl(189, 47%, 46%);
+$bc_turquoise                              : hsl(178, 83%, 82%);
+$bc_pine																	 : hsl(165, 43%, 36%);
+$bc_green																	 : hsl(140, 58%, 38%);
+$bc_lime																	 : hsl(118, 63%, 61%);
+$bc_emerald																 : hsl(112, 35%, 40%);
+$bc_camouflage														 : hsl(103, 9%, 32%);
+$bc_canvas																 : hsl(53, 39%, 54%);
+$bc_white																	 : hsl(120, 100%, 99%);
+$bc_silver																 : hsl(84, 3%, 70%);
+$bc_gray																	 : hsl(208, 7%, 37%);
+$bc_coal																	 : hsl(0, 0%, 24%);
+$bc_black																	 : hsl(0, 0%, 5%);
+$bc-color-border						   : #595959;
+
+$color_product_circle_triangle             : #8a8a8a;
+
+$color_product_bage_discount               : #fff;
+$color_product_bage_discount_bg            : #f78800;
+$color_product_bage_discount_border        : #de7a00;
+
+$color_product_bage_recommended            : #fff;
+$color_product_bage_recommended_bg         : #56eedd;
+$color_product_bage_recommended_shadow     : #569878;
+
+$color_product_bage_profitable             : #fff;
+$color_product_bage_profitable_bg          : #969;
+$color_product_bage_profitable_shadow      : #939;
+
+$color_product_bage_bestseller             : #fff;
+$color_product_bage_bestseller_bg          : #13b4eb;
+$color_product_bage_bestseller_shadow      : #0f8cb7;
+
+$color_product_bage_hit                    : #fff;
+$color_product_bage_hit_bg                 : #e7203c;
+$color_product_bage_hit_shadow             : #b4222f;
+
+$color_product_bage_new                    : #fff;
+$color_product_bage_new_bg                 : #8cbf38;
+$color_product_bage_new_shadow             : #689027;
+
+$color_news                                : #322e2e;
+$color_news_date                           : #808080;
+$color_news_date_bg                        : #fff;
+$color_news_name                           : #196ddf;
+
+$color_article_bg                          : #fff;
+
+$color_product_page_bg                                    : #fff;
+$color_product_page_shadow                                : #e0e0e0;
+$color_product_page_heading                               : #121212;
+$color_product_page_info_hidden                           : #919191;
+$color_product_page_info_hidden_span                      : #121212;
+$color_product_page_info_hidden_link                      : #1871de;
+$color_product_page_info_border                           : #e0e0e0;
+$color_product_page_info_border                           : #e0e0e0;
+$color_product_page_info_oldprice                         : #888;
+$color_product_page_info_marketing_phrase                 : #393;
+$color_product_page_one_click_buy                         : #f78800;
+$color_product_page_shipping                              : #595959;
+$color_product_page_price_sticker_bg                      : #f2f2f2;
+
+$color_product_page_shipping_logistic_status_available    : #393;
+$color_product_page_shipping_logistic_status_temporary    : #f78800;
+$color_product_page_shipping_logistic_status_outofstock   : #933;
+
+$color_product_page_shipping_hint                         : #fff;
+$color_product_page_shipping_hint_bg                      : #595959;
+$color_product_page_tagged_options                        : #4b5055;
+$color_product_page_tagged_options_border                 : #c0c0c0;
+$color_product_page_tagged_options_active                 : #fff;
+$color_product_page_tagged_options_bg_active              : #1871de;
+$color_product_page_tagged_options_border_active          : #1871de;
+$color_product_page_tagged_options_hover                  : #fff;
+$color_product_page_tagged_options_bg_hover               : #1871de;
+$color_product_page_tagged_options_border_hover           : #1871de;
+$color_product_page_tagged_options_disabled               : #ababab;
+$color_product_page_tagged_options_bg_disabled            : #e1e1e1;
+$color_product_page_tagged_options_border_disabled        : #c0c0c0;
+$color_product_page_tagged_options_disabled_hint          : #fff;
+$color_product_page_tagged_options_disabled_hint_bg       : #5e5e5e;
+
+$color_product_page_table_headrow_bg                      : #f2f2f2;
+$color_product_page_table_hover_bg                        : hsl(0, 0%, 96%);
+$color_product_page_table_marked_bg                       : #ffeec7;
+$color_product_page_table_marked_hover_bg                 : #ffe3a2;
+
+$color_product_page_accessories_title                     : #0a0a0a;
+$color_product_page_accessories_title_link                : #1871de;
+$color_product_page_accessories_type_switch               : #1871de;
+$color_product_page_accessories_type_switch_active        : #fff;
+$color_product_page_accessories_type_switch_active_bg     : #1871de;
+$color_product_page_accessories_type_switch_border        : #c0c0c0;
+$color_product_page_tabs                                  : #fefefe;
+$color_product_page_tabs_active                           : #9ded19;
+$color_product_page_tabs_bg                               : #5e5e5e;
+$color_product_page_shipshape_left                        : #919191;
+$color_product_page_shipshape_right                       : #1871de;
+$color_product_page_shipshape_partnumber                  : #f28500;
+$color_product_page_all_specifications                    : #1871de;
+$color_product_page_left_warranties                       : #121212;
+$color_product_page_right_warranties                      : #919191;
+$color_product_page_right_preview_bg                      : #f5f5f5;
+$color_product_page_right_preview_link                    : #a3a3a3;
+
+$color_product_page_color_hover                           : #ccc;
+$color_product_page_photo_small_active                    : #ccc;
+$color_product_page_photo_small_active_bg                 : #eee;
+$color_product_page_color_section                         : #fff;
+$color_product_page_color_section_inv                     : #000;
+$color_product_page_color_novalue                         : #888;
+$color_product_page_color_absent                          : #888;
+$color_product_page_red                                   : #e7203c;
+$color_product_page_blue                                  : #1871de;
+$color_product_page_yellow                                : #feff02;
+$color_product_page_green                                 : #8cbf38;
+$color_product_page_ivory                                 : hsl(59, 87%, 88%);
+$color_product_page_black                                 : #000;
+$color_product_page_white                                 : #fff;
+
+$color_holder_top_bg                       : #fff;
+$color_holder_top_shadow                   : #ededed;
+$color_bread_crumbs                        : #196ddf;
+$color_bread_crumbs_slash                  : hsl(0, 0%, 73%);
+$color_options                             : #4d4d4d;
+$color_options_shadow                      : #c4c4c4;
+$color_rubric_heading_span                 : #595959;
+$color_rubric_smart_tag                    : #020202;
+$color_rubric_smart_tag_bg                 : #fff;
+$color_rubric_smart_tag_border             : #d4d4d4;
+$color_rubric_smart_tag_active             : #fff;
+$color_rubric_smart_tag_bg_active          : #f28500;
+$color_rubric_smart_tag_border_active      : #d47400;
+$color_rubric_sort_mode                    : #bfbfbf;
+$color_rubric_sort_mode_active             : #595959;
+$color_rubric_sort_mode_icon               : #c2c2c2;
+
+$color_rubric_filters_panel_bg                            : #fff;
+$color_rubric_filters_panel_shadow                        : #d6d6d6;
+$color_rubric_filters_panel_child                         : #1871de;
+$color_rubric_filters_panel_child_span                    : #595959;
+$color_rubric_filters_panel_child_hover                   : #fff;
+$color_rubric_filters_panel_child_span_hover              : #fff;
+$color_rubric_filters_panel_child_bg_hover                : #1871de;
+$color_rubric_filters_panel_delimiter                     : #f7f7f7;
+$color_rubric_filters_panel_link                          : #121212;
+$color_rubric_filters_panel_input                         : #020202;
+$color_rubric_filters_panel_input_placeholder             : #959595;
+$color_rubric_filters_panel_input_bg                      : #f7f7f7;
+$color_rubric_filters_panel_input_bg_hover                : #fff;
+$color_rubric_filters_panel_input_border                  : #bfbfbf;
+$color_rubric_filters_panel_three_dots                    : #a3a3a3;
+$color_rubric_filters_panel_enum_bg                       : #fafafa;
+$color_rubric_filters_panel_enum_active_bg                : #f3f2cd;
+$color_rubric_filters_panel_question                      : #fafafa;
+$color_rubric_filters_panel_question_bg                   : #d6d6d6;
+$color_rubric_filters_panel_question_bg_hover             : #f28500;
+$color_rubric_filters_panel_question_hint_bg              : #5e5e5e;
+$color_rubric_filters_panel_question_hint_link            : #ffc748;
+$color_rubric_filters_panel_option                        : #020202;
+$color_rubric_filters_panel_option_quantity               : hsl(0, 1%, 75%);
+$color_rubric_filters_panel_clearable_clear               : #959595;
+$color_rubric_filters_panel_option_bg                     : #ebebeb;
+$color_rubric_filters_panel_option_hover_bg               : #e0e0e0;
+$color_rubric_filters_panel_option_active                 : #fff;
+$color_rubric_filters_panel_option_active_bg              : #1871de;
+$color_rubric_filters_panel_option_active_disabled_bg     : #659adb;
+$color_rubric_filters_panel_show_all                      : #1871de;
+$color_rubric_filters_panel_checkbox                      : #fff;
+$color_rubric_filters_panel_checkbox_bg                   : #1871de;
+$color_rubric_filters_panel_checkbox_disabled             : #f2f2f2;
+$color_rubric_filters_panel_checkbox_disabled_bg          : #bfbfbf;
+$color_rubric_filters_panel_not_found                     : #7b7b7b;
+
+$color_rubric_filters_panel_white                         : hsl(120, 22%, 96%);
+$color_rubric_filters_panel_beige                         : hsl(42, 64%, 86%);
+$color_rubric_filters_panel_yellow                        : hsl(51, 100%, 47%);
+$color_rubric_filters_panel_brown                         : hsl(17, 31%, 37%);
+$color_rubric_filters_panel_orange                        : hsl(23, 99%, 44%);
+$color_rubric_filters_panel_red                           : hsl(357, 83%, 41%);
+$color_rubric_filters_panel_pink                          : hsl(331, 82%, 78%);
+$color_rubric_filters_panel_purple                        : hsl(310, 35%, 42%);
+$color_rubric_filters_panel_blue                          : hsl(205, 67%, 68%);
+$color_rubric_filters_panel_dark_blue                     : hsl(214, 73%, 31%);
+$color_rubric_filters_panel_green                         : hsl(157, 80%, 29%);
+$color_rubric_filters_panel_gray                          : hsl(0, 0%, 67%);
+$color_rubric_filters_panel_black                         : hsl(210, 4%, 19%);
+
+$color_rubric_filters_panel_white_add_border              : #717171;
+$color_rubric_filters_panel_color_border                  : #808080;
+
+$color_article_seealso                                    : #020202;
+$color_article_seealso_bg                                 : #fff;
+$color_article_seealso_border                             : #d4d4d4;
+$color_article_aside_link                                 : #196ddf;
+$color_article_aside_link_active                          : #000;
+$color_article_aside_link_active_bg                       : #ffd966;
+
+$color_news_text_holder_description                       : #919191;
+
+$color_rubric_filters_panel_btn_specifications            : hsl(0, 0%, 27%);
+$color_rubric_filters_panel_btn_specifications_bg         : #f7dd5c;
+$color_rubric_filters_panel_btn_specifications_border     : #edd351;
+
+$color_rubric_holder_products_long_icon_ruble             : #808080;
+$color_rubric_holder_products_long_article                : #7a7a7a;
+$color_rubric_holder_products_long_article_span           : #b2b2b2;
+$color_rubric_holder_products_long_social                 : #196ddf;
+$color_rubric_holder_products_long_social_comma           : #a3a3a3;
+
+$color_rubric_prompt                                      : #fff;
+$color_rubric_prompt_bg                                   : #f78800;
+$color_rubric_prompt_border                               : #de7a00;
+
+$color_snippet_main_page      : hsl(0, 0%, 47%);
+$color_snippet_main_page_bg   : hsla(0, 0%, 99%, 1);
+
+$color_snippet_general        : #fff;
+
+$color_snippet_orange         : #fff;
+$color_snippet_orange_bg      : #f28500;
+$color_snippet_orange_border  : #d47400;
+
+$color_snippet_yellow         : #fff;
+$color_snippet_green          : #fff;
+$color_snippet_blue           : #fff;
+$color_snippet_red            : #fff;
+$color_snippet_violet         : #fff;
+
+$color_catalog_list                                        :#808080;
+$color_catalog_list_title_hover                            :#f28500;
+$color_catalog_list_bg                                     :#fff;
+$color_catalog_list_name                                   :#333;
+$color_catalog_list_name_counter                           :#595959;
+$color_catalog_list_name_border                            :#ccc;
+
+$color_actions_page_bg                                     : #fff;
+$color_actions_page_date                                   : #959595;
+$color_actions_page_hover                                  : #f28500;
+
+$color_news_feed_page_bg                                   : #fff;
+$color_news_feed_page_date                                 : #959595;
+$color_news_feed_page_name_hover                           : #1871de;
+$color_news_feed_page_news_border                          : #e5e5e5;
+$color_news_feed_page_main_news                            : #fff;
+$color_news_feed_page_main_news_bg                         : #5e5e5e;
+$color_news_feed_page_main_news_border_news                : #999;
+$color_news_feed_page_main_news_name_hover                 : #9ded19;
+$color_news_holder_border                                  : #d4d4d4;
+$color_news_holder_prev_border                             : #eee;
+
+$color_kit_form                                            : #545454;
+$color_kit_popup_form_border                               : #d7d7d7;
+$color_kit_popup_form_shadow                               : #888;
+$color_kit_shadow                                          : #ddd;
+$color_kit_h1_before_after                                 : hsl(0, 0%, 70%);
+$color_kit_tabs_bg                                         : #f5f5f5;
+$color_kit_tabs_border                                     : #176dd5;
+$color_kit_tabs_li_border                                  : #e6e6e6;
+$color_kit_tabs_icon                                       : #d6d6d6;
+$color_kit_tabs_link                                       : #545454;
+$color_kit_tabs_link_hover                                 : #1871de;
+$color_kit_tabs_mobile_link_hover                          : #fff;
+$color_kit_tabs_link_hover_border                          : #176dd5;
+$color_kit_tabs_link_disabled                              : #ababab;
+$color_kit_heading                                         : #1871de;
+$color_kit_link                                            : #1871de;
+$color_kit_input                                           : #545454;
+$color_kit_input_placeholder                               : #ababab;
+$color_kit_input_border                                    : #c7c7c7;
+$color_kit_input_hover_border                              : #1871de;
+$color_kit_input_valid                                     : #66a600;
+$color_kit_input_password                                  : #888;
+$color_kit_input_invalid                                   : #dd1a00;
+$color_kit_input_invalid_placeholder                       : #f98e80;
+$color_kit_input_invalid_bg                                : #feeeed;
+$color_kit_input_invalid_border                            : #f04832;
+$color_kit_input_key                                       : #b1b1b1;
+$color_kit_input_value                                     : #545454;
+$color_kit_input_invalid_key                               : #f98e80;
+$color_kit_input_invalid_value                             : #dd1a00;
+$color_kit_input_warning                                   : #f3b00b;
+$color_kit_input_warning_bg                                : #fff;
+$color_kit_input_disabled                                  : #6a6a6a;
+$color_kit_input_disabled_placeholder                      : #ababab;
+$color_kit_input_disabled_bg                               : #f2f2f2;
+$color_kit_input_disabled_border                           : #c7c7c7;
+$color_kit_input_checkbox                                  : #545454;
+$color_kit_input_checkbox_bg                               : #fff;
+$color_kit_input_checkbox_border                           : #1871de;
+$color_kit_input_checkbox_disabled_bg                      : #f2f2f2;
+$color_kit_input_checkbox_disabled_border                  : #b4b9bc;
+$color_kit_input_checkbox_invalid_bg                       : #feeeed;
+$color_kit_input_checkbox_invalid                          : #dd1a00;
+$color_kit_input_checkbox_invalid_bg                       : #feeeed;
+$color_kit_input_checkbox_invalid_border                   : #f04832;
+$color_kit_input_comment                                   : #b1b1b1;
+$color_kit_input_comment_login_form                        : #5e5e5e;
+$color_kit_input_switch                                    : #fff;
+$color_kit_input_switch_border                             : #1871de;
+$color_kit_input_btn_submit                                : #fff;
+$color_kit_input_btn_submit_bg                             : #f78800;
+$color_kit_input_btn_submit_border                         : #de7a00;
+$color_kit_input_btn_submit_bg_hover                       : #f6ad54;
+$color_kit_input_btn_disabled                              : #ababab;
+$color_kit_input_btn_disabled_bg                           : #f2f2f2;
+$color_kit_input_btn_disabled_border                       : #c7c7c7;
+$color_kit_input_btn_reset                                 : #1871de;
+$color_kit_time_select                                     : #6a6a6a;
+$color_kit_time_select_checked                             : #fff;
+$color_kit_time_select_bg                                  : #fff;
+$color_kit_time_select_border                              : #e8e8e8;
+$color_kit_time_select_disabled_bg                         : #f5f5f5;
+$color_kit_time_select_checked_bg                          : #1871de;
+$color_kit_time_select_checked_border                      : #1871de;
+$color_kit_download_border                                 : #b7b7b7;
+$color_kit_download_cloud                                  : #c7c7c7;
+$color_kit_download_hint                                   : #6a6a6a;
+$color_kit_download_bg_hover                               : #f3f8fd;
+$color_kit_download_border_hover                           : #1871de;
+$color_kit_download_cloud_hover                            : #1871de;
+$color_kit_download_hint_hover                             : #5e5e5e;
+$color_kit_form_comment                                    : #919191;
+
+$color_order_title                                         : #121212;
+$color_order_title_removed                                 : #1871de;
+$color_order_wrapper_shadow                                : #e0e0e0;
+$color_order_plus_minus                                    : #a3a3a3;
+$color_order_plus_minus_hover                              : #595959;
+$color_order_plus_minus_disabled                           : #ddd;
+$color_order_quantity                                      : #a3a3a3;
+$color_order_total_discount                                : #f28500;
+$color_order_switch_checkout                               : #a3a3a3;
+$color_order_switch_checkout_checked_text                  : #c5daf4;
+$color_order_switch_metro_self_pick                        : #598527;
+$color_order_checkout_dotted                               : #121212;
+$color_order_checkout_dotted_bg                            : #fff;
+$color_order_checkout_total_border                         : #c7c7c7;
+$color_order_checkout_total_line_through                   : #a3a3a3;
+$color_order_checkout_veil_bg                              : #fff;
+$color_order_checkout_edit                                 : #1871de;
+$color_order_pickup_point_count                            : #a3a3a3;
+$color_order_pickup_point_aside_wrapper_link               : #545454;
+$color_order_pickup_point_aside_wrapper_link_bg            : #e3edf9;
+$color_order_pickup_point_best_before                      : #a3a3a3;
+$color_order_pickup_point_btn_back                         : #545454;
+$color_order_pickup_point_btn_back_bg                      : #e3edf9;
+$color_order_pickup_point_btn_back_border                  : #b5cce8;
+$color_order_list_radio_payment_bg                         : #e3edf9;
+$color_order_list_radio_payment_border                     : #e0e0e0;
+
+$color_personal_cabinet_link                               : #1871de;
+$color_personal_cabinet_icon_add                           : hsl(157, 80%, 29%);
+$color_personal_cabinet_icon_valid                         : #66a600;
+$color_personal_cabinet_info                               : #66a600;
+$color_personal_cabinet_table_heading_bg                   : #e4e4c8;
+$color_personal_cabinet_table_bg                           : #f5f5dc;
+$color_personal_cabinet_table_bd                           : #eaeacf;
+$color_personal_cabinet_table_nested_bg                    : #fff;
+$color_personal_cabinet_table_nested_bd                    : #d4eacf;
+$color_personal_cabinet_table_nested_heading_bg            : #4dca8c;
+
+/************************************************************************/
+/* MAIN SIZE******* *****************************************************/
+/************************************************************************/
+
+$screen-phone 												: 900px;
